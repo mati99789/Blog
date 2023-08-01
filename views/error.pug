@@ -1,0 +1,47 @@
+doctype html
+html
+    head
+        title Page Not Found
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
+        style.
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .error-container {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 100px;
+                margin: 0;
+                color: #333;
+            }
+
+            h2 {
+                color: #333;
+            }
+
+            a {
+                display: inline-block;
+                color: #fff;
+                background-color: #007BFF;
+                padding: 10px 20px;
+                margin-top: 20px;
+                text-decoration: none;
+                border-radius: 5px;
+                text-align: center;
+            }
+    body
+    include navbar
+    .error-container
+        h1 404
+        h2 Page Not Found
+        a(href='/') Go Back Home

@@ -1,0 +1,60 @@
+doctype html
+html
+    head
+        title My Blog
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
+        style.
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+            }
+            h1 {
+                text-align: center;
+                color: #333;
+                padding: 20px 0;
+            }
+            #content {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 20px;
+                padding: 20px;
+            }
+            .post {
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+                padding: 20px;
+            }
+            .post h2 {
+                margin: 0 0 10px 0;
+                color: #333;
+            }
+            .post p {
+                color: #666;
+            }
+            .date {
+                font-size: 0.8em;
+                color: #999;
+            }
+            .read-more {
+                display: inline-block;
+                color: #fff;
+                background-color: #007BFF;
+                padding: 10px 20px;
+                margin-top: 20px;
+                text-decoration: none;
+                border-radius: 5px;
+                text-align: center;
+            }
+    body
+        include navbar
+        h1 My Blog
+        #content
+            each post in posts
+                .post
+                    h2= post.title
+                    p= post.content
+                    p.date= new Date(post.timestamp).toLocaleString()
+                    a.read-more(href=`/post/${post.id}`) Read More

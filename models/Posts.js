@@ -1,5 +1,5 @@
-import sequelize from "../database/connection";
-import {DataTypes} from "sequelize";
+const sequelize = require('./../database/connection')
+const {DataTypes} = require('sequelize')
 
 const Post = sequelize.define('Post', {
     id: {
@@ -16,7 +16,7 @@ const Post = sequelize.define('Post', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    timeStamp: {
+    timestamp: {
         type: DataTypes.DATE
     },
     authorId: {
